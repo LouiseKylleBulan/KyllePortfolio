@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Louise Kylle Bulan</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    html, body {
+      background: #fff !important;
+      color: #000 !important;
+    }
+    a, a:link, a:visited, a:hover, a:active {
+      color: #000 !important;
+      text-decoration: none;
+    }
+    .navbar .nav-link {
+      color: #000 !important;
+    }
+    .navbar .nav-link.active {
+      color: #000 !important;
+    }
+    .social-links a i, .bi, .ri, .bx {
+      color: #000 !important;
+    }
+    .section-title p, .section-title h2 {
+      color: #000 !important;
+    }
+    .count-box i, .icon-box i, .portfolio-info h4, .portfolio-info p, .info-box h3, .info-box p {
+      color: #000 !important;
+    }
+    .progress .skill, .progress .val {
+      color: #000 !important;
+    }
+    .credits, .credits a {
+      color: #000 !important;
+    }
+    /* Keep buttons visible */
+    button, .btn {
+      color: #000 !important;
+    }
+
+    /*--------------------------------------------------------------
+    # Fixed Sticky Header with Blur
+    --------------------------------------------------------------*/
+
+    /* Make header fixed at top */
+    #header {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      height: auto !important;
+      z-index: 1000 !important;
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px) !important;
+      padding: 12px 30px !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+    }
+
+    /* Name on the left */
+    #header .header-left {
+      display: inline-block !important;
+      flex: 0 !important;
+    }
+
+    #header h1 {
+      font-size: 20px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1 !important;
+      font-weight: 700 !important;
+      display: inline-block !important;
+      white-space: nowrap !important;
+    }
+
+    #header h1 a, #header h1 a:hover {
+      color: #000 !important;
+      font-family: serif !important;
+      font-weight: lighter !important;
+      display: inline-block !important;
+      white-space: nowrap !important;
+    }
+
+    /* Navbar on the right */
+    #header .navbar {
+      margin: 0 !important;
+      padding: 0 !important;
+      flex-shrink: 0 !important;
+    }
+
+    #header .navbar ul {
+      margin: 0 !important;
+      padding: 0 !important;
+      display: flex !important;
+      list-style: none !important;
+      align-items: center !important;
+      gap: 25px !important;
+    }
+
+    #header .navbar li {
+      margin: 0 !important;
+      position: relative !important;
+    }
+
+    /* Navbar links: invisible underline by default, visible single border on hover */
+    #header .navbar a {
+      font-size: 13px !important;
+      font-weight: 500 !important;
+      color: #000 !important;
+      white-space: nowrap !important;
+      transition: 0.18s ease !important;
+      display: inline-block !important;
+      position: relative !important;
+      text-decoration: none !important;
+      border-bottom: 2px solid transparent !important;
+    }
+
+    /* Hide template's ::before underline to avoid double lines */
+    #header .navbar a:before {
+      display: none !important;
+    }
+
+    /* Show a single solid underline on hover only */
+    #header .navbar a:hover {
+      border-bottom: 2px solid #000 !important;
+      text-decoration: none !important;
+    }
+
+    /* Active state: no underline by default */
+    #header .navbar .active {
+      border-bottom: none !important;
+      text-decoration: none !important;
+    }
+
+    /* Add padding to body */
+    body {
+      padding-top: 60px !important;
+    }
+
+    /* Welcome/Hero section */
+    #welcome {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    #welcome .welcome-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    #welcome h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #000 !important;
+    }
+    #welcome p.lead {
+      font-size: 16px;
+      color: rgba(0,0,0,0.85);
+      margin-bottom: 20px;
+    }
+    #welcome .btn {
+      margin-right: 12px;
+    }
+
+    /* Adjust section positioning */
+    section {
+      position: relative !important;
+      top: auto !important;
+      bottom: auto !important;
+      opacity: 1 !important;
+      padding-top: 40px !important;
+    }
+
+    section.section-show {
+      top: auto !important;
+      bottom: auto !important;
+      opacity: 1 !important;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      #header {
+        flex-wrap: wrap !important;
+        padding: 10px 15px !important;
+      }
+      
+      #header h1 {
+        font-size: 16px !important;
+      }
+      
+      #header .navbar ul {
+        gap: 12px !important;
+      }
+      
+      #header .navbar a {
+        font-size: 11px !important;
+      }
+      
+      body {
+        padding-top: 65px !important;
+      }
+
+      #welcome h1 { font-size: 22px; }
+      #welcome p.lead { font-size: 14px; }
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: Personal - v4.1.0
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="header-left">
+      <h1><a href="index.html">Louise Kylle Bulan</a></h1>
+    </div>
+
+<header id="header">
+  <div class="header-left">
+    <h1><a href="index.html">Louise Kylle Bulan</a></h1>
+  </div>
+
+  <nav id="navbar" class="navbar">
+    <ul>
+      <li><a class="nav-link active" href="#about">About</a></li>
+      <li><a class="nav-link" href="#projects">Projects</a></li>
+      <li><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+    <i class="bi bi-list mobile-nav-toggle"></i>
+  </nav>
+</header>
+  </header><!-- End Header -->
+
+  <!-- ======= Welcome Section (new) ======= -->
+  <section id="welcome" class="welcome">
+    <div class="container welcome-inner text-center">
+      <h1>Hi there! I'm Louise Kylle Bulan.</h1>
+      <p class="lead">
+        A 4th-year BSIT student from West Visayas State University - College of ICT. <br>
+        Major in Network and Information Security.
+      </p>
+      <div class="d-flex justify-content-center">
+        <a href="https://www.canva.com/design/DAG7BQMIHjA/j_qh2qJWzmVW3oK5n84Wag/view?utm_content=DAG7BQMIHjA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h600c1aef35" class="btn" target="_blank" rel="noopener" style="background:#000;padding:10px 18px;border-radius:4px;">View My Resume</a>
+
+<a href="#contact" class="btn btn-outline" style="padding:10px 18px;border-radius:4px;">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+  <!-- ======= End Welcome Section ======= -->
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+
+    <!-- ======= About Me ======= -->
+    <div class="about-me container">
+
+      <div class="section-title">
+        <p>About Me</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="assets/img/myface.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>Hi! I'm Kylle.</h3>
+          <p class="fst-italic">
+          I’m a Network and Information Security major student, proficient in Network Security as well as Technical Project Management and Creative Design.
+          I combine leadership with technical depth to build digital solutions that are efficiently managed, visually engaging, and securely architected.
+          </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Date of Birth:</strong> <span>September 09, 2004</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Address:</strong> <span> Jaro, Iloilo, Philippines</span></li>
+              </ul>
+            </div>
+          </div>
+          Outside the classroom, I like to keep things balanced. I work out to stay active, immerse myself in video games and fiction novels to unwind, and seek new perspectives through travelling.
+          While I pride myself on being versatile—wearing hats in management, design, and security—my current journey is about exploration. I am dedicated to using these diverse experiences to discover the specific path where I can truly specialize, allowing me to channel my full focus and deepen my expertise as I continue to grow.
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About Me -->
+
+    <!-- ======= Skills  ======= -->
+<section id="skills" class="skills">
+  <div class="container">
+      <div class="section-title">
+        <h2>Skills</h2>
+      </div>
+
+  <div class="skills-content">
+    
+    <div class="skill-category">
+      <h3>Technical Core</h3>
+      <div class="skill-tags">
+        <span class="tag">Network Infrastructure</span>
+        <span class="tag">Cybersecurity Operations</span>
+        <span class="tag">System Administration</span>
+        <span class="tag">UI/UX Design</span>
+        <span class="tag">Technical Project Management</span>
+        <span class="tag">Python</span>
+        <span class="tag">C++</span>
+        <span class="tag">Java/JavaScript</span>
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">Dart<span>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3>Professional Attributes</h3>
+      <div class="skill-tags">
+        <span class="tag">Leadership</span>
+        <span class="tag">Communication</span>
+        <span class="tag">Problem Solving</span>
+        <span class="tag">Team Collaboration</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+<!-- End Skills -->
+
+<!-- ======= Leadership Involvements Section ======= -->
+<section id="leadership" class="leadership">
+  <div class="container">
+    <div class="section-title">
+      <h2>Leadership Experience</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-4">
+        <div class="card leadership-card text-center">
+          <div class="card-body">
+            <h4 class="position">Vice President</h4>
+            <h5 class="organization">WVSU Band</h5>
+            <p class="years">2025 – Present</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card leadership-card text-center">
+          <div class="card-body">
+            <h4 class="position">College Representative</h4>
+            <h5 class="organization">University Senior Curriculum Council</h5>
+            <p class="years">2025 – Present</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card leadership-card text-center">
+          <div class="card-body">
+            <h4 class="position">College Representative</h4>
+            <h5 class="organization">WVSU CICT Student Council</h5>
+            <p class="years">2024 – 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card leadership-card text-center">
+          <div class="card-body">
+            <h4 class="position">Public Information Officer</h4>
+            <h5 class="organization">WVSU Band</h5>
+            <p class="years">2023 – 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card leadership-card text-center">
+          <div class="card-body">
+            <h4 class="position">Chairperson</h4>
+            <h5 class="organization">University Students' Alliance — CICT</h5>
+            <p class="years">2022 – 2023</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card leadership-card text-center">
+          <div class="card-body">
+            <h4 class="position">Board Member</h4>
+            <h5 class="organization">WVSU CICT Junior Student Council</h5>
+            <p class="years">2022—2023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- End Leadership Involvements Section -->
+  </section><!-- End About Section -->
+
+
+<section id="projects" class="projects">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Notable Projects</h2>
+    </div>
+
+    <div class="row project-grid">
+      
+      <div class="col-lg-6 col-md-6 project-item">
+        <div class="project-wrap">
+          <img src="assets/img/portfolio/app1_cover.png" class="img-fluid" alt="App 1 Cover">
+          <div class="project-info">
+            <h4>SyncedIn</h4>
+            <h6>A gamified learning App for students to improve focus and study habits.</h6>
+            <div class="project-links">
+              <button onclick="openProjectModal('app1')" class="btn-details">View Details <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 project-item">
+        <div class="project-wrap">
+          <img src="assets/img/portfolio/app2_cover.png" class="img-fluid" alt="App 2 Cover">
+          <div class="project-info">
+            <h4>AlerMap</h4>
+            <h6>A comprehensive emergency response app for the citizens of Iloilo City.</h6>
+            <div class="project-links">
+              <button onclick="openProjectModal('app2')" class="btn-details">View Details <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 project-item">
+        <div class="project-wrap">
+          <img src="assets/img/portfolio/app3_cover.png" class="img-fluid" alt="App 3 Cover">
+          <div class="project-info">
+            <h4>DigiCoop</h4>
+            <h6>An online marketplace designed to streamline WVSU Cooperative services.</h6>
+            <div class="project-links">
+              <button onclick="openProjectModal('app3')" class="btn-details">View Details <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 project-item">
+        <div class="project-wrap">
+          <img src="assets/img/portfolio/app4_cover.png" class="img-fluid" alt="App 4 Cover">
+          <div class="project-info">
+            <h4>Affinity Coffee Co. Website</h4>
+            <h6>An online ordering website designed for Affinity Coffee Co. Cafe.</h6>
+            <div class="project-links">
+              <button onclick="openProjectModal('app4')" class="btn-details">View Details <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+   <div class="section-title" style="margin-top: 80px;">
+      <h2>Graphic Designs</h2>
+    </div>
+
+    <div class="row graphics-grid">
+      
+      <div class="col-lg-4 col-md-6 graphic-item">
+        <div class="graphic-wrap">
+          <a href="assets/img/portfolio/graphics1.jpg" data-gallery="graphicsGallery" class="portfolio-lightbox">
+            <img src="assets/img/portfolio/graphics1.jpg" alt="Graphic 1">
+            <div class="graphic-overlay">
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 graphic-item">
+        <div class="graphic-wrap">
+          <a href="assets/img/portfolio/graphics2.jpg" data-gallery="graphicsGallery" class="portfolio-lightbox">
+            <img src="assets/img/portfolio/graphics2.jpg" alt="Graphic 2">
+            <div class="graphic-overlay">
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 graphic-item">
+        <div class="graphic-wrap">
+          <a href="assets/img/portfolio/graphics3.png" data-gallery="graphicsGallery" class="portfolio-lightbox">
+            <img src="assets/img/portfolio/graphics3.png" alt="Graphic 3">
+            <div class="graphic-overlay">
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 graphic-item">
+        <div class="graphic-wrap">
+          <a href="assets/img/portfolio/graphics4.jpg" data-gallery="graphicsGallery" class="portfolio-lightbox">
+            <img src="assets/img/portfolio/graphics4.jpg" alt="Graphic 4">
+            <div class="graphic-overlay">
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 graphic-item">
+        <div class="graphic-wrap">
+          <a href="assets/img/portfolio/graphics5.jpg" data-gallery="graphicsGallery" class="portfolio-lightbox">
+            <img src="assets/img/portfolio/graphics5.jpg" alt="Graphic 5">
+            <div class="graphic-overlay">
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 graphic-item">
+        <div class="graphic-wrap">
+          <a href="assets/img/portfolio/graphics6.jpg" data-gallery="graphicsGallery" class="portfolio-lightbox">
+            <img src="assets/img/portfolio/graphics6.jpg" alt="Graphic 6">
+            <div class="graphic-overlay">
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div id="project-modal" class="modal-overlay" onclick="closeProjectModal(event)">
+  <div class="project-modal-content">
+    <span class="close-btn" onclick="closeProjectModal(event)">&times;</span>
+    <h3 id="project-title">Project Title</h3>
+    <div id="project-images-container"></div>
+  </div>
+</div>
+
+  <!-- ======= Contact Section ======= -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    
+    <div class="contact-header">
+      <h2>Let's Get in Touch</h2>
+      <p>I would welcome the opportunity to discuss how I can bring value to your organization as an intern. Please feel free to reach out.</p>
+    </div>
+
+<div class="contact-wrapper">
+        
+        <div class="contact-group">
+          <h3>Email</h3>
+          <div class="email-card">
+            <div class="email-info">
+              <i class="bi bi-envelope-fill"></i>
+              <span id="email-text">louisekyllegbulan@gmail.com</span>
+            </div>
+            <button class="copy-btn" onclick="copyEmail()" title="Copy to clipboard">
+              <i class="bi bi-clipboard" id="email-copy-icon"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="contact-group">
+          <h3>Phone</h3>
+          <div class="email-card">
+            <div class="email-info">
+              <i class="bi bi-telephone-fill"></i>
+              <span id="phone-text">09452641238</span>
+            </div>
+            <button class="copy-btn" onclick="copyPhone()" title="Copy to clipboard">
+              <i class="bi bi-clipboard" id="phone-copy-icon"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="contact-group">
+          <h3>Social Media</h3>
+          <div class="social-stack">
+            
+            <a href="https://www.linkedin.com/in/louise-kylle-bulan-204b52244/" target="_blank" class="social-card">
+              <div class="social-left">
+                <div class="icon-box linkedin">
+                  <i class="bi bi-linkedin"></i>
+                </div>
+                <div class="social-text">
+                  <h4>LinkedIn</h4>
+                  <span>Connect with me professionally</span>
+                </div>
+              </div>
+              <i class="bi bi-box-arrow-up-right external-link"></i>
+            </a>
+
+            <a href="https://www.facebook.com/LouiseKylleBulan" target="_blank" class="social-card">
+              <div class="social-left">
+                <div class="icon-box facebook">
+                  <i class="bi bi-facebook"></i>
+                </div>
+                <div class="social-text">
+                  <h4>Facebook</h4>
+                  <span>Message me directly</span>
+                </div>
+              </div>
+              <i class="bi bi-box-arrow-up-right external-link"></i>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+</section><!-- End Contact Section -->
+
+  <footer id="footer">
+    <div class="container text-center">
+      
+      <div class="footer-nav">
+        <a href="#header">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="copyright">
+        2025 &copy; Louise Kylle Bulan &bull; All Rights Reserved
+      </div>
+
+    </div>
+  </footer>
+
+  <div class="credits">
+    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+  // Smooth scroll to sections when nav links are clicked
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+  </script>
+
+</body>
+
+</html>

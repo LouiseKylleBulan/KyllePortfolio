@@ -1,0 +1,1598 @@
+/**
+* Template Name: Personal - v4.1.0
+* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #040404;
+  color: #fff;
+  position: relative;
+  background: transparent;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  background: #040404 url("../img/mebg2.png") top right no-repeat;
+  background-size:cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
+@media (min-width: 1024px) {
+  body::before {
+    background-attachment: fixed;
+  }
+}
+
+a {
+  color: F79540;
+  text-decoration: none;
+}
+
+a:hover {
+  color: F79540;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Overrides: Force white background and black text ===== */
+html, body {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Remove the dark background image used via ::before */
+body::before {
+  display: none !important;
+}
+
+/* Links and nav */
+a, a:link, a:visited, a:hover, a:active {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+#header, #header.header-top {
+  background: transparent !important;
+  color: #000 !important;
+}
+
+#header h1 a, #header h2,
+.section-title p, .section-title h2,
+.about-me .content h3, .resume .resume-title,
+.interests .icon-box h3, .portfolio .portfolio-wrap .portfolio-info h4,
+.portfolio .portfolio-wrap .portfolio-info h6,
+.contact .info-box h3, .contact .info-box p,
+.credits, .credits a {
+  color: #000 !important;
+}
+
+/* Navbar colors */
+.navbar a {
+  color: rgba(0,0,0,0.85) !important;
+}
+.navbar a:hover, .navbar .active, .navbar li:hover > a {
+  color: #000 !important;
+}
+.navbar a:before {
+  background-color: #000 !important;
+}
+
+/* Make main section containers white (remove dark panels) */
+section .container,
+.section .container,
+.about-me .container,
+.skills.container,
+.counts.container,
+.portfolio .container,
+.resume .container,
+.services .container,
+.contact .php-email-form {
+  background: #ffffff !important;
+  box-shadow: none !important;
+  border: 1px solid #efefef !important;
+}
+
+/* Portfolio overlay and info text */
+.portfolio .portfolio-wrap {
+  background: rgba(255,255,255,0.95) !important;
+}
+.portfolio .portfolio-wrap .portfolio-info h4,
+.portfolio .portfolio-wrap .portfolio-info h6,
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: #000 !important;
+}
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: #000 !important;
+}
+.portfolio .portfolio-wrap::before {
+  background: transparent !important;
+  opacity: 0 !important;
+}
+
+/* Counts, services, interests, contact boxes */
+.counts .count-box,
+.interests .icon-box,
+.services .icon-box,
+.contact .info-box,
+.skills .progress {
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #eee !important;
+}
+.counts .count-box i,
+.contact .info-box i.bx,
+.services .icon-box .icon {
+  color: #000 !important;
+  background: rgba(0,0,0,0.03) !important;
+}
+
+/* Form inputs and placeholders */
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #ddd !important;
+}
+.contact .php-email-form input::placeholder,
+.contact .php-email-form textarea::placeholder {
+  color: rgba(0,0,0,0.45) !important;
+}
+
+/* Button visibility (make submit visible on white background) */
+.contact .php-email-form button[type="submit"],
+button, .btn {
+  background: #000 !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+/* Ensure text in other components is black */
+p, li, h1, h2, h3, h4, h5, h6, span, strong, em {
+  color: #000 !important;
+}
+
+/* Small misc fixes */
+.credits { color: #000 !important; }
+.credits a { color: #000 !important; }
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: ease-in-out 0.3s;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 997;
+  overflow-y: auto;
+}
+
+#header * {
+  transition: ease-in-out 0.3s;
+}
+
+#header h1 {
+  font-size: 48px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+#header h1 a, #header h1 a:hover {
+  color: #fff;
+  font-family:serif;
+  font-weight: lighter;
+  line-height: 1;
+  display: inline-block;
+}
+
+#header h2 {
+  font-family:"Poppins", serif;
+  font-size: 24px;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#header h2 span {
+  color: #fff;
+  border-bottom: 2px solid #F79540;
+  padding-bottom: 6px;
+}
+
+#header img {
+  padding: 0;
+  margin: 0;
+}
+
+#header .social-links {
+  margin-top: 40px;
+  display: flex;
+}
+
+#header .social-links a {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  line-height: 1;
+  margin-right: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+#header .social-links a:hover {
+  background: #F79540;
+}
+
+@media (max-width: 992px) {
+  #header h1 {
+    font-size: 36px;
+  }
+  #header h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #header .social-links {
+    margin-top: 15px;
+  }
+  #header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Header Top */
+#header.header-top {
+  height: 80px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: #512514d9;
+}
+
+#header.header-top .social-links, #header.header-top h2 {
+  display: none;
+}
+
+#header.header-top h3 {
+  display: none;
+}
+
+#header.header-top h1 {
+  margin-right: auto;
+  font-size: 36px;
+}
+
+#header.header-top .container {
+  display: flex;
+  align-items: center;
+}
+
+#header.header-top .navbar {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #header.header-top {
+    height: 60px;
+  }
+  #header.header-top h1 {
+    font-size: 26px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+  margin-top: 35px;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar li + li {
+  margin-left: 30px;
+}
+
+.navbar a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  transition: 0.3s;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar a i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #F79540 ;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
+  visibility: visible;
+  width: 25px;
+}
+
+.navbar a:hover, .navbar .active, .navbar li:hover > a {
+  color: #fff;
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+  margin-top: 0;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 45px;
+  left: 15px;
+  padding: 10px 0;
+  overflow-y: auto;
+  transition: 0.3s;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-mobile li {
+  padding: 12px 20px;
+}
+
+.navbar-mobile li + li {
+  margin: 0;
+}
+
+.navbar-mobile a {
+  font-size: 16px;
+  position: relative;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 140px;
+  bottom: 100%;
+  opacity: 0;
+  transition: ease-in-out 0.4s;
+  z-index: 2;
+}
+
+section.section-show {
+  top: 100px;
+  bottom: auto;
+  opacity: 50;
+  padding-bottom: 45px;
+}
+
+section .container {
+  background: #552715;
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  section {
+    top: 120px;
+  }
+  section.section-show {
+    top: 80px;
+  }
+}
+
+.section-title p {
+  margin: 0;
+  margin: -15px 0 15px 0;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about-me .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #F79540;
+}
+
+.about-me .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-me .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about-me .content ul strong {
+  margin-right: 10px;
+}
+
+.about-me .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #F79540;
+  line-height: 0;
+}
+
+.about-me .content p:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+.counts {
+  padding: 70px 0 60px;
+}
+
+.counts .count-box {
+  padding: 30px 30px 25px 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.counts .count-box i {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  color: #F79540;
+  border-radius: 50px;
+  line-height: 0;
+}
+
+.counts .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: #fff;
+}
+
+.counts .count-box p {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between categories */
+}
+
+.skill-category h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #444; /* Dark grey for headings */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap; /* Allows tags to drop to the next line on small screens */
+  gap: 12px;       /* Space between individual tags */
+}
+
+.tag {
+  background: #fff; /* White background */
+  color: #333;      /* Dark text */
+  padding: 10px 20px;
+  border-radius: 50px; /* Makes them pill-shaped */
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08); /* Subtle shadow for depth */
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* Hover Effect - Uses your orange brand color */
+.tag:hover {
+  background: #F79540;
+  color: #fff;
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 5px 15px rgba(247, 149, 64, 0.3); /* Orange glow */
+  border-color: #F79540;
+}
+
+/* Make the technical tags look clickable */
+.tag.clickable {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background: white;
+  /* Add a subtle icon to hint interaction (optional) */
+}
+
+.tag.clickable:hover {
+  background: #F79540; /* Your brand orange */
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ================= MODAL STYLES ================= */
+
+/* The dark background overlay */
+.modal-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  backdrop-filter: blur(5px); /* Blurs the website behind it */
+  z-index: 9999; /* Sits on top of everything */
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* The white box content */
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+/* Active State (When open) */
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-overlay.active .modal-content {
+  transform: translateY(0);
+}
+
+/* Typography inside the modal */
+.modal-content h3 {
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #F79540;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.modal-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.modal-content ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+  font-size: 1rem;
+}
+
+.modal-content ul li:last-child {
+  border-bottom: none;
+}
+
+/* The Close 'X' Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: #F79540;
+}
+/*--------------------------------------------------------------
+# Interests
+--------------------------------------------------------------*/
+.interests .icon-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  transition: ease-in-out 0.3s;
+}
+
+.interests .icon-box i {
+  font-size: 32px;
+  padding-right: 10px;
+  line-height: 1;
+}
+
+.interests .icon-box h3 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 16px;
+  color: #fff;
+}
+
+.interests .icon-box:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #F79540;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #F79540;
+  border: 2px solid #F79540;
+}
+
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  text-align: center;
+  background: rgba(204, 204, 204, 0.1);
+  padding: 80px;
+  transition: all ease-in-out 0.3s;
+}
+
+.services .icon-box .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: #F79540;
+  border-radius: 5px;
+  transition: all .3s ease-out 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transform-style: preserve-3d;
+}
+
+.services .icon-box .icon i {
+  color: #fff;
+  font-size: 28px;
+}
+
+.services .icon-box .icon::before {
+  position: absolute;
+  content: '';
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  transition: all .3s ease-out 0s;
+  transform: translateZ(-1px);
+}
+
+.services .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.services .icon-box h4 a {
+  color: #fff;
+}
+
+.services .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.services .icon-box:hover {
+  background: #6d2e15;
+  border-color: #F79540;
+}
+
+.services .icon-box:hover .icon {
+  background: #fff;
+}
+
+.services .icon-box:hover .icon i {
+  color: #F79540;
+}
+
+.services .icon-box:hover .icon::before {
+  background: #bd6d28;
+}
+
+.services .icon-box:hover h4 a, .services .icon-box:hover p {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+/* --- FEATURED PROJECT CARDS --- */
+.project-wrap {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s;
+}
+
+.project-wrap:hover {
+  transform: translateY(-5px);
+}
+
+.project-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-info {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+/* --- UPDATED BUTTON STYLE --- */
+.btn-details {
+    /* Force the background to be Black */
+    background-color: #000000 !important;
+    
+    /* Force the Text to be White so it's visible */
+    color: #ffffff !important;
+    
+    /* Styling to match 'View Resume' */
+    font-family: "Poppins", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    padding: 10px 18px !important;
+    border-radius: 4px !important;
+    border: none !important;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    transition: all 0.3s ease !important;
+}
+
+/* Hover Effect: Dark Grey Background */
+.btn-details:hover {
+    background-color: #333333 !important; 
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+/* Force the arrow icon inside to be white too */
+.btn-details i {
+    color: #ffffff !important;
+    margin-left: 5px;
+}
+
+/* --- GRAPHIC DESIGN (ZOOM HOVER) --- */
+.graphic-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.graphic-wrap img {
+  width: 100%;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.graphic-wrap:hover img {
+  transform: scale(1.1);
+}
+
+.graphic-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 20px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.graphic-wrap:hover .graphic-overlay {
+  opacity: 1;
+}
+
+.graphic-wrap a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: zoom-in; /* Changes cursor to a magnifying glass */
+}
+
+/* ==============================================
+   FIX: EVEN BOX SIZES (Featured Projects)
+   ============================================== */
+
+/* 1. Make the Grid Columns Flex Containers */
+.project-item {
+    display: flex !important;
+    align-items: stretch !important; /* Forces all cols in a row to be same height */
+    margin-bottom: 30px; /* Grid spacing */
+}
+
+/* 2. Stretch the Project Card to Full Height */
+.project-wrap {
+    height: 100% !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important; /* Stacks image on top of text */
+    margin-bottom: 0 !important; /* Remove individual margin, handled by column */
+}
+
+/* 3. Ensure Image is Fixed Height (Prevents jumping) */
+.project-wrap img {
+    height: 250px !important; /* Fixed height for all app covers */
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0; /* Prevents image from squishing */
+}
+
+/* 4. Make the White Info Box Fill Remaining Space */
+.project-info {
+    flex-grow: 1 !important; /* Pushes the box to fill all empty space */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important; /* Aligns title top, button bottom */
+}
+
+/* ==============================================
+   FIX: TALLER BOXES FOR PORTRAIT GRAPHICS
+   ============================================== */
+
+.graphic-wrap {
+    /* Increased height to 550px for Portrait/Vertical images */
+    height: 550px;         
+    width: 100%;
+    position: relative;
+}
+
+/* Ensure the image fills this new taller space */
+.graphic-wrap img {
+    width: 100%;
+    height: 100%;          
+    object-fit: cover;     
+    object-position: top center; /* Focuses on top of the poster/design */
+}
+
+/* --- PROJECT MODAL SPECIFICS --- */
+.project-modal-content {
+  background: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  position: relative;
+}
+
+#project-images-container img {
+  width: 100%;
+  margin-bottom: 0;
+  display: block;
+}
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+/* ==============================================
+   CONTACT SECTION (Reemans/Minimalist Style)
+   ============================================== */
+
+.contact-section {
+    padding: 60px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.contact-header p {
+    color: #555;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-group {
+    margin-bottom: 30px;
+}
+
+.contact-group h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+/* --- Email Card Style --- */
+.email-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.email-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-color: #ccc;
+}
+
+.email-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #333;
+    font-size: 1rem;
+}
+
+.email-info i {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+.copy-btn {
+    background: none !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+    color: #555 !important;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.copy-btn:hover {
+    background: #f5f5f5 !important;
+    color: #000 !important;
+}
+
+/* --- Social Media Stack --- */
+.social-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px 20px;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.social-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-color: #ccc;
+}
+
+.social-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 1.2rem;
+}
+
+/* Brand Colors for Icons */
+.icon-box.linkedin { background: #eef4fa; color: #0077b5; }
+.icon-box.facebook { background: #eef4fa; color: #1877f2; }
+.icon-box.github   { background: #f0f0f0; color: #333; }
+
+.social-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-text h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.social-text span {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.external-link {
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+.social-card:hover .external-link {
+    color: #000;
+}
+
+/*--------------------------------------------------------------
+# Credits
+--------------------------------------------------------------*/
+.credits {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 15px;
+  text-align: right;
+  font-size: 13px;
+  color: #fff;
+  z-index: 999999;
+}
+
+@media (max-width: 992px) {
+  .credits {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.credits a {
+  color: #F79540;
+  transition: 0.3s;
+}
+
+.credits a:hover {
+  color: #fff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+  header#header .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  header#header h1 {
+    font-size: 1.6rem;
+  }
+  header#header h2 {
+    font-size: 1rem;
+  }
+  .social-links a {
+    font-size: 0.95rem;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* Make section titles slightly smaller on phones */
+  .section-title p,
+  .section-title h2 {
+    font-size: 1.05rem;
+  }
+
+  /* Reduce spacing around large sections */
+  .about .row,
+  .resume .row,
+  .portfolio .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Stack portfolio items full width for small screens (Bootstrap will already stack, this tightens padding) */
+  .portfolio .portfolio-item {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  /* Make header image smaller */
+  .about-me .col-lg-4 img {
+    max-width: 220px;
+    margin: 0 auto 1rem;
+    display: block;
+  }
+
+  /* Reduce nav link size and spacing */
+  #navbar ul li a {
+    padding: 8px 8px;
+    font-size: 0.95rem;
+  }
+
+  /* Improve form input sizes */
+  .php-email-form .form-control {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  /* Count boxes tighter */
+  .counts .count-box {
+    padding: 18px 12px;
+  }
+
+  /* Progress bar tweaks */
+  .skills .progress .skill {
+    font-size: 0.95rem;
+  }
+  .skills .progress-bar-wrap {
+    height: 8px;
+  }
+
+  /* Portfolio overlay text smaller */
+  .portfolio .portfolio-info h4 {
+    font-size: 1rem;
+  }
+  .portfolio .portfolio-info p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small enhancement for very small screens */
+@media (max-width: 420px) {
+  header#header h1 {
+    font-size: 1.3rem;
+  }
+  header#header h2 {
+    font-size: 0.9rem;
+  }
+  .social-links {
+    margin-top: 8px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Fixed Sticky Header with Blur
+--------------------------------------------------------------*/
+
+/* Make header fixed at top */
+#header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  z-index: 1000 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  padding: 12px 30px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* Name on the left */
+#header .header-left {
+  display: inline-block !important;
+  flex: 0 !important;
+}
+
+#header h1 {
+  font-size: 20px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+#header h1 a, #header h1 a:hover {
+  color: #000 !important;
+  font-family: serif !important;
+  font-weight: lighter !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+/* Navbar on the right */
+#header .navbar {
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
+}
+
+#header .navbar ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  list-style: none !important;
+  align-items: center !important;
+  gap: 25px !important;
+}
+
+#header .navbar li {
+  margin: 0 !important;
+  position: relative !important;
+}
+
+#header .navbar a {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #000 !important;
+  white-space: nowrap !important;
+  transition: 0.3s !important;
+  display: inline-block !important;
+  position: relative !important;
+  text-decoration: none !important;
+  border-bottom: 2px solid transparent !important;
+}
+
+#header .navbar a:before {
+  display: none !important;
+}
+
+#header .navbar a:hover {
+  border-bottom: 2px solid #000 !important;
+  text-decoration: none !important;
+}
+
+#header .navbar .active {
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+/* Add padding to body */
+body {
+  padding-top: 60px !important;
+}
+
+/* Adjust section positioning */
+section {
+  position: relative !important;
+  top: auto !important;
+  bottom: auto !important;
+  opacity: 1 !important;
+  padding-top: 40px !important;
+}
+
+section.section-show {
+  top: auto !important;
+  bottom: auto !important;
+  opacity: 1 !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #header {
+    flex-wrap: wrap !important;
+    padding: 10px 15px !important;
+  }
+  
+  #header h1 {
+    font-size: 16px !important;
+  }
+  
+  #header .navbar ul {
+    gap: 12px !important;
+  }
+  
+  #header .navbar a {
+    font-size: 11px !important;
+  }
+  
+  body {
+    padding-top: 65px !important;
+  }
+}
+
+#welcome .btn,
+#welcome .btn-outline {
+  font-family: "Poppins", sans-serif !important;
+  background: #000 !important;
+  color: #fff !important;
+  border: 2px solid #000 !important;
+  padding: 10px 18px !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  transition: background .18s ease, color .18s ease !important;
+}
+
+/* Hover state: slightly darker black to show interactivity */
+#welcome .btn:hover,
+#welcome .btn-outline:hover {
+  background: #111 !important;
+  color: #fff !important;
+  border-color: #111 !important;
+}
+
+/* Leadership Involvements cards */
+.leadership .leadership-card {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  padding: 18px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.leadership .leadership-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+}
+.leadership .leadership-card .card-body { padding: 18px; }
+.leadership .position {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #111;
+}
+.leadership .organization {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+.leadership .years {
+  font-size: 0.85rem;
+  color: rgba(0,0,0,0.55);
+  margin-bottom: 0;
+}
+/* Make sure the section spacing matches others */
+.leadership { padding-top: 30px; padding-bottom: 30px; }
+
+/* ==============================================
+   FOOTER STYLES (Reemans Style)
+   ============================================== */
+
+#footer {
+    background: black;  /* The Teal Green background color */
+    color: #ffffff;       /* White text */
+    padding: 40px 0;      /* Top/Bottom spacing */
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    z-index: 10;
+}
+
+/* ==============================================
+   FIX: FOOTER LINKS WHITE
+   ============================================== */
+
+/* Target the links specifically inside the footer */
+#footer .footer-nav a {
+    color: #ffffff !important;  /* Force White Text */
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    /* 0 top/bottom, 10px left/right */
+    margin: 0 10px !important;  
+    transition: opacity 0.3s ease;
+}
+
+/* ADDED: Hover Effect - Underline */
+#footer .footer-nav a:hover {
+    text-decoration: underline !important;
+    opacity: 1 !important;
+}
+
+/* Ensure the copyright text is also white */
+#footer .copyright {
+    color: #ffffff !important;
+    opacity: 0.9;
+}
+
+/* Copyright Text */
+.copyright {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.9;        /* Slightly transparent to separate from links */
+}
+
+/* Hide the old credits if they still exist */
+.credits {
+    display: none !important;
+}
