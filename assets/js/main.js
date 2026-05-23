@@ -274,7 +274,8 @@ const projectData = {
     app2: {
         images: [
             "assets/img/portfolio/app2_content.png",
-            "assets/img/portfolio/app2_content2.png"
+            "assets/img/portfolio/app2_content2.png",
+            "assets/img/portfolio/app2_content3.png"
         ]
     },
     app3: {
